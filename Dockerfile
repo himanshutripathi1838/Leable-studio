@@ -10,6 +10,9 @@ ENV PORT=7860
 ENV LABEL_STUDIO_PORT=7860
 ENV BASE_DATA_DIR=/data
 
+# Fix CSRF verification failed (403) error when embedded in Hugging Face Spaces
+ENV CSRF_TRUSTED_ORIGINS=https://himanshutripathi-pol.hf.space
+
 EXPOSE 7860
 
 # Start Label Studio on port 7860
