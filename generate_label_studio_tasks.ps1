@@ -23,7 +23,9 @@ $tasks = foreach ($file in $files) {
     }
 }
 
-$tasks | ConvertTo-Json -Depth 10 | Set-Content -LiteralPath $outputFile -Encoding UTF8
+$tasksJson = $tasks | ConvertTo-Json -Depth 10
+[System.IO.File]::WriteAllText($outputFile, $tasksJson)
+
 
 Write-Output "Created: $outputFile"
 Write-Output "Image tasks: $($files.Count)"
