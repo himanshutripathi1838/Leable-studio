@@ -1,4 +1,15 @@
+---
+title: Railway Pole Labeling
+emoji: 🚂
+colorFrom: blue
+colorTo: indigo
+sdk: docker
+app_port: 7860
+pinned: false
+---
+
 # Railway Pole Labeling - Label Studio Setup
+
 
 This folder contains a local Label Studio setup for railway pole labeling.
 
