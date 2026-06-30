@@ -1,0 +1,12 @@
+# Virtual Environment
+venv/
+.venv/
+env/
+ENV/
+
+# Label Studio local data and database
+.label-studio/
+*.log
+
+# Dataset Images (Recommended to keep local/cloud, not in Git due to size)
+images/
