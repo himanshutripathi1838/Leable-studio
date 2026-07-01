@@ -16,7 +16,10 @@ ENV LABEL_STUDIO_PORT=7860
 ENV BASE_DATA_DIR=/data
 
 # Fix CSRF verification failed (403) error when embedded in Hugging Face Spaces
-ENV CSRF_TRUSTED_ORIGINS=https://himanshutripathi-pol.hf.space
+ENV CSRF_TRUSTED_ORIGINS=https://himanshutripathi-pol.hf.space,https://huggingface.co,https://*.hf.space
+ENV USE_X_FORWARDED_HOST=true
+ENV SECURE_PROXY_SSL_HEADER=HTTP_X_FORWARDED_PROTO,https
+
 
 # Enable serving local files from the app directory inside the container
 ENV LABEL_STUDIO_LOCAL_FILES_SERVING_ENABLED=true
